@@ -1,0 +1,9 @@
+---
+- name: Test Playbook on Localhost
+  hosts: local
+  tasks:
+    - name: Ensure Nginx is installed
+      apt:
+        name: nginx
+        state: present
+
