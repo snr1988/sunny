@@ -1,9 +1,9 @@
 ---
-- name: Test Playbook on Localhost
-  hosts: local
+- name: this playbook creates a file
+  hosts: all  #(list of host)
+  become: true  #(it become root) 
   tasks:
-    - name: Ensure Nginx is installed
-      apt:
-        name: nginx
-        state: present
-
+  - name: creating a file 
+    file:
+     path: /home/ansadmin/demofile 
+     state: touch
